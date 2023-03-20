@@ -3,3 +3,4 @@ docs
 examples
 host-manager
 manager
+*.class

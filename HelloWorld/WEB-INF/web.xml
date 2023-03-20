@@ -1,10 +1,13 @@
 <web-app>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
 	<servlet>
 		<servlet-name>HelloServlet</servlet-name>
-		<servlet-class>com.example.servlets.HelloServlet</servlet-class>
+		<servlet-class>com.example.servlets.XMLServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>HelloServlet</servlet-name>
-		<url-pattern>/hello</url-pattern>
+		<url-pattern>/xml</url-pattern>
 	</servlet-mapping>
 </web-app>
