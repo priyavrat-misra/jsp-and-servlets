@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class XMLServlet extends HttpServlet {
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html");

@@ -8,9 +8,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 // http://localhost:8080/HelloWorld/hello?username=World&symbol=?
-@WebServlet("/hello")
+@WebServlet(urlPatterns = {"/hello", "/hi"})
 public class HelloServlet extends HttpServlet {
 
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html");
@@ -29,11 +30,13 @@ public class HelloServlet extends HttpServlet {
 		writer.println("</body></html>");
 	}
 
+	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html");
 		String email = request.getParameter("mail");
 		String password = request.getParameter("pass");
+		// request.getParameterValues() if multiple data is being passed (e.g., checkboxes)
 		writer.println("<!DOCTYPE html><html><head>");
 		writer.println("<title>Hello!</title></head><body>");
 		if (email != null && password != null)

@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 @WebServlet(description = "A servlet using annotations.", urlPatterns = {"/annotation"})
 public class AnnotationServlet extends HttpServlet {
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter writer = response.getWriter();
 		response.setContentType("text/html");
