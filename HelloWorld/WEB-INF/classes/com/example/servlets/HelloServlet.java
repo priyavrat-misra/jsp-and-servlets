@@ -28,6 +28,7 @@ public class HelloServlet extends HttpServlet {
 		else
 			writer.println(username + symbol);
 		writer.println("</body></html>");
+		writer.close();
 	}
 
 	@Override
@@ -37,13 +38,7 @@ public class HelloServlet extends HttpServlet {
 		String email = request.getParameter("mail");
 		String password = request.getParameter("pass");
 		// request.getParameterValues() if multiple data is being passed (e.g., checkboxes)
-		writer.println("<!DOCTYPE html><html><head>");
-		writer.println("<title>Hello!</title></head><body>");
-		if (email != null && password != null)
-			writer.println("Logged in successfully!");
-		else
-			writer.println("Something went wrong.");
-		writer.println("</body></html>");
+		response.sendRedirect("./hi?username=" + email);  // 302 Redirect
 	}
 
 }

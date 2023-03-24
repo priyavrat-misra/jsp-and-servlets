@@ -14,5 +14,6 @@ public class XMLServlet extends HttpServlet {
 		writer.println("<!DOCTYPE html><html><head>");
 		writer.println("<title>XMLServlet</title></head>");
 		writer.println("<body>Hello from XMLServlet.</body></html>");
+		writer.close();
 	}
 }

@@ -16,5 +16,6 @@ public class AnnotationServlet extends HttpServlet {
 		writer.println("<!DOCTYPE html><html><head>");
 		writer.println("<title>AnnotationServlet</title></head>");
 		writer.println("<body>Hello from AnnotationServlet.</body></html>");
+		writer.close();
 	}
 }
