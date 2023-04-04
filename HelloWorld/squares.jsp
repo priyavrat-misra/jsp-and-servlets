@@ -1,3 +1,4 @@
+<!-- View -->
 <%@ page import = "java.util.ArrayList" %>
 
 <!DOCTYPE html>

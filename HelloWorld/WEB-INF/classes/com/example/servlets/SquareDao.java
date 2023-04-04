@@ -1,3 +1,4 @@
+// Model
 package com.example.servlets;
 
 import java.util.ArrayList;
